@@ -4,7 +4,7 @@ int main(int argv,char** argc)
 	//test log 
 	int i=0;
 	set_log_filename("a");
-	set_log_level(FLOG_ERR);
+	set_log_level(FLOG_NORMAL);
 	while (1)
 	{
 		i++;
