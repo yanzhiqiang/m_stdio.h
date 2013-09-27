@@ -24,7 +24,6 @@ void test_log()
 	set_log_level(FLOG_NORMAL);
 	while (1)
 	{
-
 		i++;
 		
 		//log_to_file(3,"i am here %d");
