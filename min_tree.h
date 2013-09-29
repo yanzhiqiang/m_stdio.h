@@ -1,20 +1,20 @@
-#ifndef __BALANCE_TREE_H
-#define __BALANCE_TREE_H
+#ifndef __MIN_TREE_H
+#define __MIN_TREE_H
 
 //to do : template to support float,char
-class Balance_Tree
+class Min_Tree
 {
 public:
-	Balance_Tree();
-	Balance_Tree(double* num);
+	Min_Tree();
+	Min_Tree(double* num);
 	int add_tree(double* num);
 	double* pop_tree();
 	double* top_tree();
 	int delete_tree_node(struct TreeNode* node);
-	~Balance_Tree();	
+	~Min_Tree();	
 
 private:
-	struct TreeNode* Balance_Tree_Root;
+	struct TreeNode* Min_Tree_Root;
 }
 
 
