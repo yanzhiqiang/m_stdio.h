@@ -85,10 +85,12 @@ double* Balance_Tree::top_tree()
 //just delete root
 int delete_tree_node(struct TreeNode* p_node)
 {
+	if(!p_node)	return -1;
 	if(p_node->left_son == NULL && p_node->right_son == NULL)
 	{
 		free(p_node);
 		p_node=NULL;
+		return 0;
 	}
 	
 	struct TreeNode* p1 = p_node;
@@ -125,6 +127,7 @@ int delete_tree_node(struct TreeNode* p_node)
 		free(p1);
 		p1=NULL;
 	}
+	return 0;
 }
 
 Balance_Tree::~Balance_Tree()
