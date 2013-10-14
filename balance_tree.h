@@ -15,7 +15,7 @@ public:
 
 private:
 	struct TreeNode* Balance_Tree_Root;
-}
+};
 
 
 #endif

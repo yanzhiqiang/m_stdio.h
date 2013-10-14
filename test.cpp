@@ -6,7 +6,7 @@ void test_time();
 
 int main(int argv,char** argc)
 {
-	test_log();
+	//test_log();
 	//test_time();
 	return 0;
 }

@@ -15,7 +15,7 @@ public:
 
 private:
 	struct TreeNode* Min_Tree_Root;
-}
+};
 
 
 #endif

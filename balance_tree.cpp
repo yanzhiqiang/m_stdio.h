@@ -15,7 +15,7 @@
 
 #include "balance_tree.h"
 #include "date_type.h"
-
+#include <stdlib.h>
 
 Balance_Tree::Balance_Tree()
 {
@@ -64,7 +64,7 @@ int Balance_Tree::add_tree(double* p_num)
 		}
 		else
 		{
-			t_TreeNode->right_length =  d_TreeNode;
+			t_TreeNode->right_son =  d_TreeNode;
 			t_TreeNode->right_length++;
 		}
 	}
@@ -83,7 +83,7 @@ double* Balance_Tree::top_tree()
 }
 
 //just delete root
-int delete_tree_node(struct TreeNode* p_node)
+int Balance_Tree::delete_tree_node(struct TreeNode* p_node)
 {
 	if(!p_node)	return -1;
 	if(p_node->left_son == NULL && p_node->right_son == NULL)
@@ -108,7 +108,7 @@ int delete_tree_node(struct TreeNode* p_node)
 			p2->num=p1->num;
 			p1->num=NULL;
 		}
-		free(p1)
+		free(p1);
 		p1=NULL;
 	}
 	else

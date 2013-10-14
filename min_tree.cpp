@@ -13,9 +13,10 @@
 	Ô¤ÉêÇë20¸östruct Node ¿Õ¼ä
 */
 
-#include "Min_Tree.h"
+#include "min_tree.h"
 #include "date_type.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 Min_Tree::Min_Tree()
 {
@@ -48,7 +49,7 @@ int Min_Tree::add_tree(double* p_num)
 		d_TreeNode = t_TreeNode;
 		if(t_TreeNode->left_length <= t_TreeNode->right_length)
 		{
-			t_TreeNode = t_TreeNode->left_length;
+			t_TreeNode = t_TreeNode->left_son;
 			if(t_TreeNode == NULL)
 			{
 				t_TreeNode = (struct TreeNode*) malloc(sizeof(struct TreeNode));
@@ -62,7 +63,7 @@ int Min_Tree::add_tree(double* p_num)
 		}
 		else
 		{
-			t_TreeNode = t_TreeNode->right_length;
+			t_TreeNode = t_TreeNode->right_son;
 			if(t_TreeNode == NULL)
 			{
 				t_TreeNode = (struct TreeNode*) malloc(sizeof(struct TreeNode));
@@ -99,7 +100,7 @@ double* Min_Tree::top_tree()
 }
 
 //just delete root
-int delete_tree_node(struct TreeNode* p_node)
+int Min_Tree::delete_tree_node(struct TreeNode* p_node)
 {
 	if(!p_node)	return -1;
 	if(p_node->left_son == NULL && p_node->right_son == NULL)

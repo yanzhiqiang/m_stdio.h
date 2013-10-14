@@ -1,4 +1,5 @@
 #include "date_type.h"
+#include <stdio.h>
 
 int reset_TreeNode(struct TreeNode* tree_node)
 {
